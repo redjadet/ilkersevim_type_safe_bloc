@@ -1,0 +1,30 @@
+name: ilkersevim_type_safe_bloc
+description: >-
+  Type-safe flutter_bloc context extensions and selector, builder, listener,
+  and consumer widgets for compile-time Cubit/BLoC access.
+version: 0.1.0
+repository: https://github.com/redjadet/ilkersevim_type_safe_bloc
+homepage: https://github.com/redjadet/ilkersevim_type_safe_bloc
+issue_tracker: https://github.com/redjadet/ilkersevim_type_safe_bloc/issues
+topics:
+  - bloc
+  - flutter
+  - state-management
+
+environment:
+  sdk: '>=3.12.0 <4.0.0'
+  flutter: '>=3.38.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_bloc: ^9.1.1
+  provider: ^6.1.5
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
