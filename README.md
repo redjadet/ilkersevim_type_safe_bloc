@@ -3,6 +3,14 @@
 Type-safe `flutter_bloc` helpers: `BuildContext` extensions and thin widgets
 around `BlocSelector`, `BlocBuilder`, `BlocListener`, and `BlocConsumer`.
 
+## Why use this package?
+
+- Make each Cubit/BLoC and state relationship explicit at compile time.
+- Replace repeated context lookup and widget generic boilerplate with one
+  consistent API.
+- Use nullable lookup helpers when a provider is optional, while retaining
+  fail-fast access for required providers.
+
 License: [Apache-2.0](LICENSE). Issues:
 [github.com/redjadet/ilkersevim_type_safe_bloc/issues](https://github.com/redjadet/ilkersevim_type_safe_bloc/issues).
 
