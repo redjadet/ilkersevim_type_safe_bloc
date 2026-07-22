@@ -10,7 +10,7 @@ License: [Apache-2.0](LICENSE). Issues:
 
 ```yaml
 dependencies:
-  ilkersevim_type_safe_bloc: ^0.1.0
+  ilkersevim_type_safe_bloc: ^0.1.2
 ```
 
 Requires Flutter `>=3.38.0`, Dart `>=3.12.0`, `flutter_bloc` ^9.1.1.
