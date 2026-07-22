@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.2
+
+- Prove GitHub Actions OIDC publish path after Pub.dev Admin enablement.
+
 ## 0.1.1
 
 - README: clarify hosted-only install and OIDC publishing notes.
