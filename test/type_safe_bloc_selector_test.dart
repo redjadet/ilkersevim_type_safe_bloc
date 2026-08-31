@@ -22,9 +22,7 @@ void main() {
       expect(find.text('Value: 0'), findsOneWidget);
     });
 
-    testWidgets('rebuilds only when selected value changes', (
-      tester,
-    ) async {
+    testWidgets('rebuilds only when selected value changes', (tester) async {
       final TestCubit cubit = TestCubit();
       await tester.pumpWidget(
         MaterialApp(
@@ -137,8 +135,7 @@ void main() {
           home: BlocProvider<TestCubit>(
             create: (_) => cubit,
             child: TypeSafeBlocBuilder<TestCubit, TestState>(
-              buildWhen: (previous, current) =>
-                  previous.value != current.value,
+              buildWhen: (previous, current) => previous.value != current.value,
               builder: (context, state) =>
                   Text('${state.value}: ${state.label}'),
             ),
@@ -183,8 +180,7 @@ void main() {
         MaterialApp(
           home: TypeSafeBlocBuilder<TestCubit, TestState>(
             bloc: cubit,
-            builder: (context, state) =>
-                Text('${state.value}: ${state.label}'),
+            builder: (context, state) => Text('${state.value}: ${state.label}'),
           ),
         ),
       );
@@ -404,8 +400,7 @@ void main() {
             create: (_) => cubit,
             child: TypeSafeBlocConsumer<TestCubit, TestState>(
               listener: (context, state) {},
-              buildWhen: (previous, current) =>
-                  previous.value != current.value,
+              buildWhen: (previous, current) => previous.value != current.value,
               builder: (context, state) =>
                   Text('${state.value}: ${state.label}'),
             ),
@@ -460,8 +455,7 @@ void main() {
             listener: (context, state) {
               listenerCount++;
             },
-            builder: (context, state) =>
-                Text('${state.value}: ${state.label}'),
+            builder: (context, state) => Text('${state.value}: ${state.label}'),
           ),
         ),
       );

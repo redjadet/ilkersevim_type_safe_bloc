@@ -37,9 +37,7 @@ void main() {
       );
     });
 
-    testWidgets('cubit throws StateError when cubit not found', (
-      tester,
-    ) async {
+    testWidgets('cubit throws StateError when cubit not found', (tester) async {
       await tester.pumpWidget(
         Builder(
           builder: (context) {
@@ -53,9 +51,7 @@ void main() {
       );
     });
 
-    testWidgets('tryBloc returns null when bloc not found', (
-      tester,
-    ) async {
+    testWidgets('tryBloc returns null when bloc not found', (tester) async {
       await tester.pumpWidget(
         Builder(
           builder: (context) {
@@ -67,9 +63,7 @@ void main() {
       );
     });
 
-    testWidgets('tryCubit returns null when cubit not found', (
-      tester,
-    ) async {
+    testWidgets('tryCubit returns null when cubit not found', (tester) async {
       await tester.pumpWidget(
         Builder(
           builder: (context) {
