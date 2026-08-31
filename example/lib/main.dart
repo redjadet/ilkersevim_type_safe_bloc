@@ -10,7 +10,7 @@ class ExampleApp extends StatelessWidget {
   const ExampleApp({super.key});
 
   @override
-  Widget build(final BuildContext context) {
+  Widget build(BuildContext context) {
     return MaterialApp(
       home: BlocProvider<CounterCubit>(
         create: (_) => CounterCubit(),
@@ -24,12 +24,12 @@ class CounterPage extends StatelessWidget {
   const CounterPage({super.key});
 
   @override
-  Widget build(final BuildContext context) {
+  Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
         child: TypeSafeBlocSelector<CounterCubit, int, int>(
-          selector: (final state) => state,
-          builder: (final context, final count) => Text('Count: $count'),
+          selector: (state) => state,
+          builder: (context, count) => Text('Count: $count'),
         ),
       ),
       floatingActionButton: FloatingActionButton(

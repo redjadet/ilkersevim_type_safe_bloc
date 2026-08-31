@@ -58,7 +58,7 @@ class TypeSafeBlocListener<C extends StateStreamableSource<S>, S>
   final bool Function(S previous, S current)? listenWhen;
 
   @override
-  Widget buildWithChild(final BuildContext context, final Widget? child) =>
+  Widget buildWithChild(BuildContext context, Widget? child) =>
       BlocListener<C, S>(
         bloc: bloc,
         listenWhen: listenWhen,
@@ -117,9 +117,9 @@ class TypeSafeBlocConsumer<C extends StateStreamableSource<S>, S>
   final bool Function(S previous, S current)? buildWhen;
 
   @override
-  Widget build(final BuildContext context) => BlocConsumer<C, S>(
+  Widget build(BuildContext context) => BlocConsumer<C, S>(
     bloc: bloc,
-    listener: listener ?? (_, final _) {},
+    listener: listener ?? (_, _) {},
     listenWhen: listenWhen,
     buildWhen: buildWhen,
     builder: builder,

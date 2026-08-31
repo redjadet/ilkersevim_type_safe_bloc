@@ -47,7 +47,7 @@ class TypeSafeBlocSelector<C extends StateStreamableSource<S>, S, T>
   final Widget Function(BuildContext context, T value) builder;
 
   @override
-  Widget build(final BuildContext context) =>
+  Widget build(BuildContext context) =>
       BlocSelector<C, S, T>(bloc: bloc, selector: selector, builder: builder);
 }
 
@@ -90,6 +90,6 @@ class TypeSafeBlocBuilder<C extends StateStreamableSource<S>, S>
   final bool Function(S previous, S current)? buildWhen;
 
   @override
-  Widget build(final BuildContext context) =>
+  Widget build(BuildContext context) =>
       BlocBuilder<C, S>(bloc: bloc, buildWhen: buildWhen, builder: builder);
 }

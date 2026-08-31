@@ -154,10 +154,10 @@ extension TypeSafeBlocAccess on BuildContext {
   /// );
   /// ```
   T selectState<C extends StateStreamableSource<S>, S, T>({
-    required final T Function(S state) selector,
+    required T Function(S state) selector,
   }) {
     try {
-      return select<C, T>((final cubit) => selector(cubit.state));
+      return select<C, T>((cubit) => selector(cubit.state));
     } on ProviderNotFoundException catch (_, stackTrace) {
       Error.throwWithStackTrace(
         StateError(
