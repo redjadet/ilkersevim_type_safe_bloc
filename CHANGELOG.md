@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.4
+
+- Exclude `build/**` from analyzer scope in `analysis_options.yaml`.
+- Sync README install caret with current release.
+
 ## 0.1.3
 
 - Explain how typed access and widgets reduce repeated `flutter_bloc`
